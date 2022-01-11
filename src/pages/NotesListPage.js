@@ -10,7 +10,7 @@ const NotesListPage = () => {
     getAllNotes();
   }, []);
   
-  let getAllNotes =  async () => {
+  let getAllNotes = async () => {
     setInterval(getNotes, 1000);
   }
 
