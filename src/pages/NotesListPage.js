@@ -11,7 +11,7 @@ const NotesListPage = () => {
   }, []);
 
   let getNotes = async () => {
-    let response = await fetch('/api/notes');
+    let response = await fetch('https://quicktodoapp.herokuapp.com/api/notes');
     let data = await response.json();
     setNotes(data);
   }
