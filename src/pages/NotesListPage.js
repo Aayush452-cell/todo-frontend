@@ -7,8 +7,12 @@ const NotesListPage = () => {
   let [notes,setNotes] = useState([]);
 
   useEffect(() => {
-    getNotes();
+    getAllNotes();
   }, []);
+  
+  let getAllNotes =  async () => {
+    setInterval(getNotes, 1000);
+  }
 
   let getNotes = async () => {
     let response = await fetch('https://quicknotestodo.herokuapp.com/api/notes');
